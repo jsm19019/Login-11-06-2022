@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
+    <link rel="stylesheets" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="script" href="myScript.js">
+    <script src="myScript.js"></script>
+</head>
+<body style="background-image: url(src2.jpg)"; background-size: cover ;>
+    <nav class="px-3 py-3  flex justify-between  transition-2 duration-500 " >
+        <img src="img5.png" class="w-14" alt="logo">
+            <div class="buttons">
+                <ul class="flex space-x-8 text-white py-2"> 
+                    <li class="cursor-pointer"><button class="hover:text-white hover:bg-red-400 px-4 py-1 rounded-3xl hover:shadow-gray-700 hover:shadow-md ease-out hover:scale-110 duration-300 " onclick="home()" >Home</button></li>
+                    <li class="cursor-pointer"><button class="hover:text-white hover:bg-red-400 px-4 py-1 rounded-3xl hover:shadow-gray-700 hover:shadow-md ease-out hover:scale-110 duration-300 " onclick="gallery()" >Gallery</button></li>
+                    <li class="cursor-pointer"><button class="hover:text-white hover:bg-red-400 px-4 py-1 rounded-3xl hover:shadow-gray-700 hover:shadow-md ease-out hover:scale-110 duration-300 " onclick="contact()" >Contact</button></li>
+                    <li class="cursor-pointer"><button class="hover:text-white hover:bg-red-400 px-4 py-1 rounded-3xl hover:shadow-gray-700 hover:shadow-md ease-out hover:scale-110 duration-300 " onclick="about()" >About</button></li>
+                </ul>
+            </div>
+        <img src="src9.png" class="w-12 h-12 rounded-full border-spacing-7 border-black " alt="profile">
+    </nav>
+    
+    
+    <div  id="tagline" style="display: block;" class="text text-center text-7xl px-48 py-36 my-20 text-gray-300 animate-pulsed"  >
+        <h1  class="hover:text-8xl duration-1000 animate-pulse text-shadow hover:text-orange-300" >“It’s through mistakes that you actually can grow. You have to get bad in order to get good”</h1>
+
+    </div>
+    <div class=" space-x-6 bg-origin-padding text-center my-20  transition-2 duration-700 position-static " id="logsine" style="display: block;"  >
+        <button class="bg-gray-500 px-4 py-1  text-white hover:bg-gray-700 rounded-3xl hover:shadow-2xl hover:shadow-black ease-out hover:scale-110 duration-300" type="button" onclick="loginfunc()" >Login</button>
+        <button class="bg-gray-500 px-3 py-1  text-white hover:bg-gray-700 rounded-3xl hover:shadow-2xl hover:shadow-black ease-out hover:scale-110 duration-300" type="button" onclick="signupfunc()">Signup</button>
+   </div> 
+    <div id="loginpage" style="display:none" class="container bg-gray-500 box-border rounded-md my-40 h-80 w-96 mx-auto border-2 border-red-300  " >
+        <h1 class="text-center px-5 py-2 text-white text-3xl">Login</h1>
+            <div class="my-8 mx-3 "> 
+                <form>
+                    <h1  class="text-white">Email</h1>
+                        <input type="text" placeholder="Enter your Email" class="rounded-sm hover:border-2 hover:border-red-400 duration-300 w-80 ">
+                    <h1 class="text-white ">Password</h1>
+                        <input type="text" placeholder="Enter the Password" class="hover:border-2 hover:border-red-400 rounded-sm duration-300 w-80 ">
+                </form>
+            </div>
+        <div class=" mx-3 " >
+            <ul class="flex space-x-36 "  > 
+                <li><button id="Login" type="button" class="bg-gray-600  text-white hover:bg-gray-700 rounded-3xl hover:shadow-md px-4 py-1 " >Login</button></li>
+                <li><button id="Close" type="button" onclick="loginclose()" class="bg-gray-600 text-white hover:bg-gray-700 rounded-3xl hover:shadow-md  px-4 py-1 ">Close</button></li>
+            </ul>
+        </div>
+    </div>    
+    <div id="signuppage" style="display:none" class="container bg-gray-500 box-border rounded-md my-40 h-80 w-96 mx-auto border-2 border-red-300   "  >
+        <h1 class="text-center px-5 py-2 text-white text-3xl">Signup</h1>
+            <div class="my-8 mx-3 "> 
+                <form>
+                    <h1 class="text-white">Email</h1>
+                        <input type="text" placeholder="Enter your Email" class="rounded-sm hover:border-2 hover:border-red-400 duration-300 w-80 ">
+                    <h1 class="text-white ">Password</h1>
+                        <input type="text" placeholder="Enter the Password" class="hover:border-2 hover:border-red-400 rounded-sm duration-300 w-80 ">
+               </form>
+            </div>
+        <div class=" mx-3 ">
+            <ul class="flex space-x-36 "> 
+                <li><button id="Login2" type="button" class="bg-gray-600  text-white hover:bg-gray-700 rounded-3xl hover:shadow-md px-4 py-1 " >Login</button></li>
+                <li><button id="demo2" type="button" onclick="signupclose()" class="bg-gray-600 text-white hover:bg-gray-700 rounded-3xl hover:shadow-md  px-4 py-1 " >Close</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="gallery1" style="display:none " >
+        
+        <ul class="flex my-16  " >
+             <li class="card hover:outline-double hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-3xl hover:shadow-orange-300 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700 " style="background-image: url(src2.jpg); background-size: cover; border: none " >Sunset <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+             <li class="card hover:outline-double hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-3xl hover:shadow-red-300 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(src2.jpg); background-size: cover; border: none " onclick="springfunc()"  >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li> 
+             <li class="card hover:outline-double hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-3xl hover:shadow-green-300 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(src2.jpg); background-size: cover; border: none " >Autumn <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>  
+             <li class="card hover:outline-double hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-3xl hover:shadow-violet-300 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(src2.jpg); background-size: cover; border: none " >Rainy  <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li> 
+             <li class="card hover:outline-double hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-3xl hover:shadow-teal-300 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(src2.jpg); background-size: cover; border: none " >Foggy  <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+        </ul>
+        <div class="text  my-40 mx-14  text-gray-300 text-center font-thin ">
+            <h1 class=" text-7xl " >Look deep into nature, and then you will understand everything better</h1>
+        </div>
+    </div>
+    <div  id="spring" style="display: none"; >
+        <div  class="  my-0 mx-11  " >
+       <h class="text text-8xl text-gray-200 font-thin"  >Spring</h> 
+       </div>
+       <div  class="card bg-transparent border-none my-24 "  >
+        <ul class="flex"  >
+          <li class="card hover:outline-double  hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-2xl hover:shadow-green-900 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(spr3.jpg); background-size: cover; border: none " >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+          <li class="card hover:outline-double  hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-2xl hover:shadow-red-900 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(spr2.jpg); background-size: cover; border: none " >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+          <li class="card hover:outline-double  hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-2xl hover:shadow-blue-900 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(spr5.jpg); background-size: cover; border: none " >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+          <li class="card hover:outline-double  hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-2xl hover:shadow-rose-900 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(spr6.jpg); background-size: cover; border: none " >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+          <li class="card hover:outline-double  hover:outline-slate-500 mx-auto h-72 w-56 flex shadow-2xl shadow-black hover:ease-out hover:scale-125 duration-500 hover:shadow-2xl hover:shadow-yellow-700 text-center text-5xl py-5 text-gray-300 bg-gray-500 hover:bg-gray-700" style="background-image: url(spr7.jpg); background-size: cover; border: none " >Spring <p  class=" text-lg my-auto"> Mother Nature doesn't need a filter </p> </li>
+        </ul>
+       </div>
+    </div>
+    <div id="contact"style="display: none;" class="mx-8" >
+        <main>
+        <h1 class="text  text-7xl text-gray-300  font-thin "  > Contact </h1>
+        <p></p>
+
+
+        </main>
+    </div>
+    <div id="about"style="display: none;" class="mx-8" >
+        <main>
+        <h1 class="text  text-7xl text-gray-300  font-thin "  > About </h1>
+        <p></p>
+
+
+        </main>
+    </div>
+
+</body>
+</html>
